@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["menu.js"],"sourcesContent":["'use strict';\n\n// menu\n\nconst toggleMenu = () => {\n  document.querySelector('.js-menu').classList.toggle('show');\n};\n\ndocument.querySelectorAll('.js-menu-btn').forEach(btn => {\n  btn.addEventListener('click', toggleMenu);\n});\n"],"file":"menu.js"}

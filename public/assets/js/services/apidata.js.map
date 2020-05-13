@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["services/apidata.js"],"sourcesContent":["const getDataApi = () => {\n  return fetch('./api/board.json').then((response) => response.json());\n};\n\nexport default {\n  getDataApi: getDataApi,\n};\n"],"file":"apidata.js"}
