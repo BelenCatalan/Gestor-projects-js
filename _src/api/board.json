@@ -8,21 +8,30 @@
             "id": "sdf0s98234n3ki",
             "title": "Unificar funcionalidad",
             "description": "Lorem ipsum dolor sit amet",
-            "tags": [
-              "JS",
-              "Css",
-              "Html"
-            ]
+            "tags": ["JS", "Css", "Html"]
           },
           {
             "id": "9f8734ksd",
             "title": "Pintar el DOM",
             "description": "Lorem ipsum dolor sit amet",
-            "tags": [
-              "JS",
-              "Css",
-              "Html"
-            ]
+            "tags": ["JS", "Css", "Html"]
+          }
+        ]
+      },
+      {
+        "title": "Hecho",
+        "cards": [
+          {
+            "id": "sdf0s98234oopd",
+            "title": "Unificar funcionalidad",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": ["JS", "Css", "Html"]
+          },
+          {
+            "id": "9f8734foo",
+            "title": "Publicar Git",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": ["JS", "Css", "Html"]
           }
         ]
       }
