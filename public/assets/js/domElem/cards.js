@@ -47,9 +47,44 @@ const paintCards = (parent, cards) => {
     });
     const textinfoElem = document.createTextNode(' 3/5');
     textInfoS.appendChild(textinfoElem);
+    renderBtnsCards(divCardElem);
+  });
+};
+
+const renderBtnsCards = (parent) => {
+  const btnsContainer = helper.addElement(parent, {
+    label: 'div',
+    class: ['app-card-btns', 'btn-group-vertical', 'btn-group-sm'],
+  });
+  const upCardBtn = helper.addElement(btnsContainer, {
+    label: 'button',
+    class: ['btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-card-up-button'],
+    attributes: {
+      type: 'button',
+      title: 'Mover esta tarjeta hacia arriba',
+    },
+  });
+  helper.addElement(upCardBtn, {
+    tag: 'span',
+    class: ['fas', 'fa-arrow-up'],
+  });
+
+  const downCardBtn = helper.addElement(btnsContainer, {
+    label: 'button',
+    class: ['btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-card-up-button'],
+    attributes: {
+      type: 'button',
+      title: 'Mover esta tarjeta hacia abajo',
+    },
+  });
+  helper.addElement(downCardBtn, {
+    tag: 'span',
+    class: ['fas', 'fa-arrow-down'],
   });
 };
 
 export default {
   paintCards,
 };
+
+//# sourceMappingURL=cards.js.map

@@ -86,5 +86,3 @@ const renderBtnsCards = (parent) => {
 export default {
   paintCards,
 };
-
-//# sourceMappingURL=cards.js.map
