@@ -50,26 +50,25 @@ const addNewCard = (ev) => {
 
 const render = () => {
   board.renderPaint(listActs);
-  const listLeftBtn = document.querySelectorAll('.js-move-left');
-  for (const btn of listLeftBtn) {
-    btn.addEventListener('click', moveListLeft);
-  }
+  listenEvents('.js-move-left', 'click', moveListLeft);
+  listenEvents('.js-move-right', 'click', moveListRight);
+  listenEvents('.js-delete', 'click', moveListDelete);
 
-  const listRightBtn = document.querySelectorAll('.js-move-right');
-  for (const btn of listRightBtn) {
-    btn.addEventListener('click', moveListRight);
-  }
-
-  const listDeleteBtn = document.querySelectorAll('.js-delete');
-  for (const btn of listDeleteBtn) {
-    btn.addEventListener('click', moveListDelete);
-  }
   const addNewListBtn = document.querySelector('.js-new-listbtn');
   addNewListBtn.addEventListener('click', addNewList);
 
-  const addNewCardBtn = document.querySelectorAll('.js-new-card');
-  for (const btn of addNewCardBtn) {
-    btn.addEventListener('click', addNewCard);
+  listenEvents('.js-new-card', 'click', addNewCard);
+
+  // const addNewCardBtn = document.querySelectorAll('.js-new-card');
+  // for (const btn of addNewCardBtn) {
+  //   btn.addEventListener('click', addNewCard);
+  // }
+};
+
+const listenEvents = (selector, event, handleEvent) => {
+  const elements = document.querySelectorAll(selector);
+  for (const element of elements) {
+    element.addEventListener(event, handleEvent);
   }
 };
 getApiData();
