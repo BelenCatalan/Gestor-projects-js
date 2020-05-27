@@ -2,6 +2,7 @@
   "board": {
     "list": [
       {
+        "id": "list-1",
         "title": "Por hacer",
         "cards": [
           {
@@ -19,6 +20,7 @@
         ]
       },
       {
+        "id": "list-2",
         "title": "Hecho",
         "cards": [
           {

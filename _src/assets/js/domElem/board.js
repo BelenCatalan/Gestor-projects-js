@@ -47,8 +47,8 @@ const renderPaint = (data) => {
     });
     const btnDeleteList = helper.addElement(btnOptContainer, {
       label: 'button',
-      class: ['btn', 'btn-light', 'text-muted', 'border', 'shadow-sm'],
-      attributes: { title: 'Borrar esta tarjeta', type: 'button' },
+      class: ['js-delete', 'btn', 'btn-light', 'text-muted', 'border', 'shadow-sm'],
+      attributes: { title: 'Borrar esta tarjeta', type: 'button', id: list.id },
     });
     const icondelete = helper.addElement(btnDeleteList, {
       label: 'span',
@@ -56,8 +56,8 @@ const renderPaint = (data) => {
     });
     const btnLeft = helper.addElement(btnOptContainer, {
       label: 'button',
-      class: ['btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-list-move-left'],
-      attributes: { title: 'Mover lista izquierda', type: 'button' },
+      class: ['js-move-left', 'btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-list-move-left'],
+      attributes: { title: 'Mover lista izquierda', type: 'button', id: list.id },
     });
     const iconLeft = helper.addElement(btnLeft, {
       label: 'span',
@@ -66,8 +66,8 @@ const renderPaint = (data) => {
 
     const btnRight = helper.addElement(btnOptContainer, {
       label: 'button',
-      class: ['btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-list-move-left'],
-      attributes: { title: 'Mover lista derecha', type: 'button' },
+      class: ['js-move-right', 'btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-list-move-left'],
+      attributes: { title: 'Mover lista derecha', type: 'button', id: list.id },
     });
     helper.addElement(btnRight, {
       label: 'span',
@@ -97,7 +97,7 @@ const renderPaint = (data) => {
     //   title: 'Editar el título de la lista',
     // });
     // listForm.appendChild(inputForm);
-    addNewCard(listContainer);
+    addNewCard(listContainer, list);
   });
   addNewList(newBoard);
 };
@@ -117,18 +117,17 @@ const addNewList = (parent) => {
   });
 };
 
-const addNewCard = (parent) => {
+const addNewCard = (parent, list) => {
   const btnAddCard = helper.addElement(parent, {
     label: 'button',
-    class: ['ml-1', 'btn', 'btn-primary', 'btn-sm', 'text-white-50'],
-    attributes: { title: 'Añadir Tarjeta', type: 'button' },
+    class: ['js-new-card', 'ml-1', 'btn', 'btn-primary', 'btn-sm', 'text-white-50'],
+    attributes: { title: 'Añadir Tarjeta', type: 'button', id: list.id },
   });
   helper.addElement(btnAddCard, {
     label: 'span',
     class: ['fas', 'fa-plus'],
+    text: ' Añadir otra tarjeta',
   });
-  const addbtnCardText = document.createTextNode(' Añadir otra tarjeta');
-  btnAddCard.appendChild(addbtnCardText);
 };
 
 export default {

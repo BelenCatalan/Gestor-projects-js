@@ -14,9 +14,8 @@ const paintCards = (parent, cards) => {
       const tagElem = helper.addElement(tagsContainer, {
         label: 'span',
         class: ['badge', 'badge-secondary', 'bg-success', 'mr-1'],
+        text: tag,
       });
-      const tagName = document.createTextNode(tag);
-      tagElem.appendChild(tagName);
     });
     const cardTitle = helper.addElement(divCardElem, {
       label: 'div',
@@ -25,9 +24,9 @@ const paintCards = (parent, cards) => {
     const title = helper.addElement(cardTitle, {
       label: 'h3',
       class: ['h6'],
+      text: card.title,
     });
-    const titleContent = document.createTextNode(card.title);
-    title.appendChild(titleContent);
+
     const infoCard = helper.addElement(divCardElem, {
       label: 'div',
       class: ['text-black-50'],
@@ -44,9 +43,9 @@ const paintCards = (parent, cards) => {
       label: 'small',
       class: '',
       attributes: { title: 'Subtareas completadas: 3 de 5' },
+      text: ' 3/5',
     });
-    const textinfoElem = document.createTextNode(' 3/5');
-    textInfoS.appendChild(textinfoElem);
+
     renderBtnsCards(divCardElem);
   });
 };
