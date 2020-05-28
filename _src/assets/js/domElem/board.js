@@ -22,12 +22,13 @@ const renderPaint = (data) => {
 
     const inputForm = helper.addElement(listForm, {
       label: 'input',
-      class: ['app-list-input', 'form-control', 'form-control-sm'],
+      class: ['js-listTitle', 'app-list-input', 'form-control', 'form-control-sm'],
       attributes: {
         placeholder: 'Tareas importantes',
         type: 'text',
         value: list.title,
         title: 'Editar el título de la lista',
+        id: list.id,
       },
     });
 

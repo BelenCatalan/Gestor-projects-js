@@ -46,21 +46,22 @@ const paintCards = (parent, cards) => {
       text: ' 3/5',
     });
 
-    renderBtnsCards(divCardElem);
+    renderBtnsCards(divCardElem, card);
   });
 };
 
-const renderBtnsCards = (parent) => {
+const renderBtnsCards = (parent, data) => {
   const btnsContainer = helper.addElement(parent, {
     label: 'div',
     class: ['app-card-btns', 'btn-group-vertical', 'btn-group-sm'],
   });
   const upCardBtn = helper.addElement(btnsContainer, {
     label: 'button',
-    class: ['btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-card-up-button'],
+    class: ['js-upCard', 'btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-card-up-button'],
     attributes: {
       type: 'button',
       title: 'Mover esta tarjeta hacia arriba',
+      id: data.id,
     },
   });
   helper.addElement(upCardBtn, {
@@ -70,10 +71,11 @@ const renderBtnsCards = (parent) => {
 
   const downCardBtn = helper.addElement(btnsContainer, {
     label: 'button',
-    class: ['btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-card-up-button'],
+    class: ['js-downCard', 'btn', 'btn-light', 'text-muted', 'border', 'shadow-sm', 'app-card-up-button'],
     attributes: {
       type: 'button',
       title: 'Mover esta tarjeta hacia abajo',
+      id: data.id,
     },
   });
   helper.addElement(downCardBtn, {

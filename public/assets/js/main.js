@@ -47,12 +47,24 @@ const addNewList = (ev) => {
 const addNewCard = (ev) => {
   console.log('new card', ev.currentTarget);
 };
+const moveCardUp = (ev) => {
+  console.log('card up', ev.currentTarget.id);
+};
+const moveCardDown = (ev) => {
+  console.log('card down', ev.currentTarget.id);
+};
+const inputListTitle = (ev) => {
+  console.log('input text', ev.currentTarget.id);
+};
 
 const render = () => {
   board.renderPaint(listActs);
   listenEvents('.js-move-left', 'click', moveListLeft);
   listenEvents('.js-move-right', 'click', moveListRight);
   listenEvents('.js-delete', 'click', moveListDelete);
+  listenEvents('.js-upCard', 'click', moveCardUp);
+  listenEvents('.js-downCard', 'click', moveCardDown);
+  listenEvents('.js-listTitle', 'click', inputListTitle);
 
   const addNewListBtn = document.querySelector('.js-new-listbtn');
   addNewListBtn.addEventListener('click', addNewList);
