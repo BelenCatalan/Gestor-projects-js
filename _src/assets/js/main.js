@@ -65,7 +65,8 @@ const render = () => {
   listenEvents('.js-upCard', 'click', moveCardUp);
   listenEvents('.js-downCard', 'click', moveCardDown);
   listenEvents('.js-listTitle', 'click', inputListTitle);
-
+  // listenEvents('.js-foo', 'click', inputListTitle);
+ // listenEvents('.js-foo', 'click', inputListTitle);
   const addNewListBtn = document.querySelector('.js-new-listbtn');
   addNewListBtn.addEventListener('click', addNewList);
 
